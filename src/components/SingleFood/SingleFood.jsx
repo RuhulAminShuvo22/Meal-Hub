@@ -1,13 +1,13 @@
 import React from 'react';
 import "./SingleFood.css"
 
-const SingleFood = ({food}) => {
+const SingleFood = ({food, addToCart}) => {
     console.log(food)
     return (
         <div className='card'>
             <img src={food.strMealThumb} alt="" />
             <h1>{food.strMeal}</h1>
-            <button className='btn-card'>Add to Card</button>
+            <button onClick={()=>addToCart(food)} className='btn-card'>Add to Cart</button>
         </div>
     );
 };
