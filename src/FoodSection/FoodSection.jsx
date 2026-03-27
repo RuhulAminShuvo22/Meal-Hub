@@ -1,6 +1,7 @@
 import React, { use, useState } from 'react';
 import SingleFood from '../components/SingleFood/SingleFood';
 import Cart from '../components/Cart/Cart';
+import { ToastContainer, toast } from 'react-toastify';
 
 const FoodSection = ({foodDataRes}) => {
 
@@ -16,7 +17,7 @@ const FoodSection = ({foodDataRes}) => {
 
     const handleOrder =()=> {
         setCart([])
-        alert("order complete !!")
+        toast.success("Your order is completed !!")
     }
     
 
@@ -39,6 +40,7 @@ const FoodSection = ({foodDataRes}) => {
             <button onClick={handleOrder}  className='btn-card'>Order now</button>
 
         </div>
+        <ToastContainer />
         {/* ............................ */}
 
 
