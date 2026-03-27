@@ -11,7 +11,12 @@ const FoodSection = ({foodDataRes}) => {
     const [cart, setCart] = useState([])
 
     const addToCart = (foodData) => {
-        console.log(foodData)
+        setCart([...cart,foodData])
+    }
+
+    const handleOrder =()=> {
+        setCart([])
+        alert("order complete !!")
     }
     
 
@@ -30,6 +35,8 @@ const FoodSection = ({foodDataRes}) => {
         <div style={{backgroundColor:"cyan", width:"75%"}}>
             <h1>card</h1>
             <Cart cart={cart}> </Cart>
+
+            <button onClick={handleOrder}  className='btn-card'>Order now</button>
 
         </div>
         {/* ............................ */}
