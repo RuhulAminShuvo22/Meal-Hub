@@ -19,7 +19,7 @@ function App() {
 
     <Navbar></Navbar>
 
-    <Suspense>
+    <Suspense fallback = {<p>loading....git</p>}>
       <FoodSection foodDataRes ={foodDataRes} ></FoodSection>
     </Suspense>
     
